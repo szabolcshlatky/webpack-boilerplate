@@ -97,9 +97,7 @@ const ninja_users = [
   { name: `chun-li`, premium: true }
 ];
 
-const premiumUsers = ninja_users.filter(ninja_user => {
-  return ninja_user.premium;
-});
+const premiumUsers = ninja_users.filter(ninja_user => ninja_user.premium);
 
 console.log(premiumUsers);
 
