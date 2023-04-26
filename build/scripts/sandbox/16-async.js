@@ -154,9 +154,9 @@ fetch(`https://jsonplaceholder.typicode.com/todos/`).then((response) => { // Thi
 
   /* Async & Await */
 
-const getTodoss = async () => { // async always returns a promise
+const getTodoss = async (url) => { // async always returns a promise
 
-  const response = await fetch(`https://jsonplaceholder.typicode.com/todos/`); // 'await' keyword stops the value assign to a variable until the promise resolves. So first the fetch finishes and assign the value to the 'response'.
+  const response = await fetch(url); // 'await' keyword stops the value assign to a variable until the promise resolves. So first the fetch finishes and assign the value to the 'response'.
 
   if(response.status !== 200) {
     throw new Error(`Cannot fetch the data`); // This message will be the error's message property.
@@ -167,7 +167,7 @@ const getTodoss = async () => { // async always returns a promise
 
 };
 
-getTodoss() // This won't block the sync codes.
+getTodoss(`https://jsonplaceholder.typicode.com/todos/`) // This won't block the sync codes.
   .then(data => console.log(`resolved: `, data)) // Without then(), in a variable, it would return still a promise.
   .catch(error => console.log(`rejected: `, error.message));
 
