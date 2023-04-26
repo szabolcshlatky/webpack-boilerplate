@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-HU" dir="ltr" id="index">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="referrer" content="no-referrer-when-downgrade" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+
+  <meta name="description" content="150-160 karakter, (fókusz)kulcsszavakkal az elején" />
+  <meta name="keywords" content="fókusz,kevésbéfontos,max10" />
+  <meta name="author" content="Hlatky Szabolcs" />
+  <meta name="creator" content="Coding Sable" />
+  <meta name="publisher" content="Ictys" />
+  <meta name="generator" content="Visual Studio Code" />
+  <meta name="distribution" content="global" />
+  <meta name="revised" content="Ictys, 2023/01/01" />
+
+  <title>Finance Logger - TypeScript tutorial</title>
+
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" href="images/favicon.ico">
+
+  <script type="module" src="scripts/app.js" defer></script>
+</head>
+
+<body>
+
+  <header class="wrapper">
+    <h1>Finance Logger</h1>
+
+    <!-- output list -->
+    <ul class="item-list">
+
+    </ul>
+  </header>
+
+  <main>
+    <form class="new-item-form">
+      <fieldset class="field">
+        <label>Type:
+          <select id="type">
+            <option value="invoice">Invoice</option>
+            <option value="payment">Payment</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset class="field">
+        <label>To / From:
+          <input type="text" id="tofrom" />
+        </label>
+      </fieldset>
+      <fieldset class="field">
+        <label>Details:
+          <input type="text" id="details" />
+        </label>
+      </fieldset>
+      <fieldset class="field">
+        <label>Amount (£):
+          <input type="number" id="amount" />
+        </label>
+      </fieldset>
+      <input type="submit" class="btn" value="Add" />
+    </form>
+
+    <a href="https://www.thenetninja.co.uk" target="_blank" rel="no-referrer noopener"
+      title="Opens in a new web-browser-tab" aria-label="Net Ninja">The Net Ninja</a>
+  </main>
+
+  <figure class="B__E--M">
+    <button type="button" title="Go to page top" aria-label="Bookmark" onclick="location.href='#top';">
+      <picture>
+        <!-- <source sizes="" srcset="" type="image/" media="(min-width: )" /> -->
+        <img src="images/copyright.png" alt="Copyright to Coding Sable" width="64px" height="64px" />
+      </picture>
+    </button>
+  </figure>
+
+  <noscript>The web-browser does NOT support JavaScript or it is switched off!</noscript>
+</body>
+
+</html>

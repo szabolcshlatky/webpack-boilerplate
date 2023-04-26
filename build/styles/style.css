@@ -1,0 +1,587 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font: normal normal 16px/1.6 sans-serif;
+}
+
+body, button {
+  font-size: clamp(1rem, 1.25vw, 1.25rem);
+  line-height: 1.5;
+}
+
+menu {
+  list-style: none;
+}
+
+menu li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 5rem);
+}
+
+h2 {
+  font-size: clamp(1.8rem, 4.5vw, 4.5rem);
+}
+
+h3 {
+  font-size: clamp(1.6rem, 4vw, 4rem);
+}
+
+h4 {
+  font-size: clamp(1.4rem, 3.5vw, 3.5rem);
+}
+
+h5 {
+  font-size: clamp(1.2rem, 3vw, 3rem);
+}
+
+h6 {
+  font-size: clamp(1.1rem, 2.5vw, 2.5rem);
+}
+
+pre {
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+dl, ul, ol {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+dd, li {
+  display: list-item;
+  margin-inline-start: 40px;
+}
+
+dt {
+  text-decoration: underline wavy;
+}
+
+dd {
+  list-style: square inside;
+}
+
+strong {
+  font-weight: bolder;
+}
+
+em {
+  font-style: oblique;
+}
+
+ins {
+  text-decoration: double underline;
+}
+
+ins::before,
+ins::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  background-color: yellow;
+}
+
+ins::before {
+  content: " [insertion start] ";
+}
+
+ins::after {
+  content: " [insertion end] ";
+}
+
+del {
+  text-decoration: double line-through;
+}
+
+del::before,
+del::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  background-color: tomato;
+}
+
+del::before {
+  content: " [deletion start] ";
+}
+
+del::after {
+  content: " [deletion end] ";
+}
+
+s::before,
+s::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+s::before {
+  content: " [start of stricken text] ";
+}
+
+s::after {
+  content: " [end of stricken text] ";
+}
+
+mark {
+  background-color: internal value;
+  color: internal value;
+}
+
+mark::before,
+mark::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  background-color: tomato;
+}
+
+mark::before {
+  content: " [highlight start] ";
+}
+
+mark::after {
+  content: " [highlight end] ";
+}
+
+data:hover::after {
+  content: "(" attr(value) ")";
+  font-size: smaller;
+}
+
+dfn::before {
+  content: "(";
+}
+
+dfn::after {
+  content: ")";
+}
+
+abbr {
+  display: inline;
+  cursor: help;
+}
+
+address {
+  font-style: normal;
+}
+
+a:link, a:visited {
+  color: internal value;
+  text-decoration: 0.5px dashed underline;
+  cursor: pointer;
+}
+
+a:link:active, a:visited:active {
+  color: internal value;
+}
+
+a:hover {
+  text-decoration: underline;
+  transition: 1s;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+code {
+  font: normal normal 1rem/1.6 monospace;
+  color: black;
+  word-wrap: break-word;
+  background-color: #eee;
+  border-radius: 3px;
+  padding: 0 3px;
+}
+
+samp {
+  font: normal normal 1rem/1.6 monospace;
+  color: crimson;
+  word-wrap: break-word;
+  background-color: #f1f1f1;
+  padding: 2px;
+  font-size: 105%;
+}
+
+kbd {
+  font: normal normal 1rem/1.6 monospace;
+  background-color: #eee;
+  border-radius: 3px;
+  border: 1px solid #b4b4b4;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+  color: #333;
+  display: inline-block;
+  padding: 2px 4px;
+  white-space: nowrap;
+}
+
+var {
+  font: italic bold 1rem/1.6 monospace;
+}
+
+iframe {
+  border: none;
+}
+
+button, input[type=button i], input[type=submit i], input[type=reset i] {
+  display: inline-block;
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.B__E--M {
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  z-index: 9999;
+  opacity: 0.5;
+}
+.B__E--M:hover {
+  opacity: 1;
+  scale: 1.2;
+  transition: 1s;
+  transform: rotateZ(-90deg);
+}
+.B__E--M button {
+  border: none;
+  background: none;
+}
+
+/* PROJECT */
+#index {
+  background-color: #00539F;
+}
+#index div {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #FF9500;
+  padding: 0 1.25em 1.25em 1.25em;
+  border: 5px solid moccasin;
+}
+#index div nav {
+  display: flex;
+  place-content: space-evenly;
+  place-items: center;
+}
+#index div nav menu {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1em;
+}
+#index div nav .btn {
+  cursor: pointer;
+  background: #050e21;
+  background-image: -webkit-linear-gradient(top, #050e21, #091a3d);
+  background-image: -moz-linear-gradient(top, #050e21, #091a3d);
+  background-image: -ms-linear-gradient(top, #050e21, #091a3d);
+  background-image: -o-linear-gradient(top, #050e21, #091a3d);
+  background-image: linear-gradient(to bottom, #050e21, #091a3d);
+  border: none;
+  -webkit-border-radius: 60;
+  -moz-border-radius: 60;
+  border-radius: 60px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5019607843);
+  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5019607843);
+  -moz-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5019607843);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5019607843);
+  font-family: Arial;
+  color: #fff;
+  font-size: 16px;
+  padding: 22px 22px 22px 22px;
+  text-decoration: none;
+}
+#index div nav .btn:hover {
+  background: #51718d;
+  background-image: -webkit-linear-gradient(top, #51718d, #2b496a);
+  background-image: -moz-linear-gradient(top, #51718d, #2b496a);
+  background-image: -ms-linear-gradient(top, #51718d, #2b496a);
+  background-image: -o-linear-gradient(top, #51718d, #2b496a);
+  background-image: linear-gradient(to bottom, #51718d, #2b496a);
+  text-decoration: none;
+}
+#index div .syntax {
+  width: 600px;
+  margin: auto;
+  border: thin #c0c0c0 solid;
+  padding: 5px 4px;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  width: 50%;
+  cursor: pointer;
+}
+#index div .syntax figcaption {
+  background-color: #222;
+  color: #ccc;
+  font: italic smaller sans-serif;
+  padding: 3px 2px;
+  text-align: center;
+}
+#index div .syntax figcaption .btn {
+  background-color: salmon;
+  color: peachpuff;
+  border-radius: 25px;
+  padding: 0.5em 1em;
+}
+#index div .syntax figcaption .btn:hover {
+  background-color: peachpuff;
+  color: salmon;
+}
+#index div .syntax:hover {
+  box-shadow: 3px 3px 4px 4px #fff;
+}
+#index div h1 {
+  margin: 0;
+  padding: 1.25em 0;
+  color: #00539F;
+  text-shadow: 3px 3px 1px #222;
+  font-size: 3.75rem;
+  text-align: center;
+}
+#index div h2, #index div h3, #index div h4, #index div h5, #index div h6 {
+  margin: 1em 0;
+}
+#index div p, #index div li {
+  line-height: 2;
+  letter-spacing: 1px;
+}
+#index div ol, #index div ul {
+  margin-left: 1em;
+}
+#index div li {
+  margin-left: 2em;
+}
+
+#css-bacon-fansite h1 {
+  color: #66bfbf;
+  font-size: 200px;
+}
+#css-bacon-fansite #heading:hover {
+  color: red;
+}
+#css-bacon-fansite img:hover {
+  background-color: gold;
+}
+#css-bacon-fansite .bacon {
+  background-color: green;
+}
+#css-bacon-fansite .broccoli {
+  background-color: red;
+}
+#css-bacon-fansite .circular {
+  border-radius: 50%;
+}
+#css-bacon-fansite .box-200 {
+  width: 200px;
+  height: 200px;
+}
+#css-bacon-fansite .lightblue {
+  border: solid black 10px;
+  padding: 20px;
+  background-color: lightblue;
+}
+#css-bacon-fansite .darkred {
+  margin-left: 200px;
+  border: solid black 20px;
+  background-color: darkred;
+}
+#css-bacon-fansite .yellowgreen {
+  margin-left: 400px;
+  border: solid black 10px;
+  background-color: yellowgreen;
+}
+#css-bacon-fansite .box-100 {
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+#css-bacon-fansite .red {
+  left: 200px;
+  background-color: red;
+}
+#css-bacon-fansite .blue {
+  right: 100px;
+  background-color: blue;
+}
+#css-bacon-fansite .yellow {
+  right: 100px;
+  background-color: yellow;
+}
+#css-bacon-fansite .gold {
+  right: 40px;
+  bottom: 40px;
+  background-color: gold;
+  z-index: 2;
+}
+#css-bacon-fansite .silver {
+  background-color: silver;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1;
+}
+#css-bacon-fansite .bronze {
+  background-color: goldenrod;
+  right: 0px;
+  bottom: 0px;
+  z-index: 0;
+}
+#css-bacon-fansite .absolute-box-100 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+#css-bacon-fansite .absolute-position {
+  position: relative;
+}
+#css-bacon-fansite .absolute-position .pink {
+  top: 200px;
+  left: 200px;
+  background-color: pink;
+}
+#css-bacon-fansite .absolute-position .purple {
+  top: 100px;
+  left: 100px;
+  background-color: purple;
+}
+#css-bacon-fansite .absolute-position .orange {
+  left: 0px;
+  background-color: orange;
+}
+#css-bacon-fansite footer a {
+  color: powderblue;
+}
+
+#jquery-dom .btn:active {
+  color: red;
+}
+#jquery-dom .invisible {
+  visibility: hidden;
+}
+#jquery-dom .huge {
+  color: yellow;
+  font-family: cursive;
+  font-size: 10rem;
+  font-weight: bold;
+}
+#jquery-dom .margin-50 {
+  margin: 50px;
+}
+
+#es6-guide header {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: space-around;
+}
+#es6-guide main {
+  width: 80%;
+  margin: 1em auto;
+}
+#es6-guide main .dom .invisible {
+  visibility: hidden;
+}
+#es6-guide main .dom .btn {
+  background-color: red;
+  color: yellow;
+  font-family: cursive;
+  font-size: 10rem;
+  font-weight: bold;
+}
+#es6-guide main .dom .errorText {
+  padding: 10px;
+  color: crimson;
+  border: 1px dotted crimson;
+}
+#es6-guide main .dom .successText {
+  padding: 10px;
+  color: limegreen;
+  border: 1px dotted limegreen;
+}
+#es6-guide main .dom .box {
+  width: 200px;
+  height: 200px;
+  margin: 10px 0;
+  background-color: #eee;
+  text-align: center;
+  padding: 20px;
+}
+#es6-guide main .dom .signup-form {
+  max-width: 200px;
+  margin: 40px auto;
+  padding: 10px;
+  background: linear-gradient(#eee, #fff);
+}
+#es6-guide main .dom .signup-form input {
+  display: block;
+  margin: 10px auto;
+  padding: 4px;
+}
+#es6-guide main .dom .signup-form .success {
+  border: 2px solid limegreen;
+  box-shadow: 3px 3px 5px crimson;
+}
+#es6-guide main .dom .signup-form .error {
+  border: 2px solid crimson;
+  box-shadow: 3px 3px 5px limegreen;
+}
+#es6-guide main h2, #es6-guide main div, #es6-guide main ul, #es6-guide main p {
+  margin: 1em;
+}
+#es6-guide main li {
+  margin-left: 2em;
+}
+#es6-guide footer .signup-form {
+  max-width: 200px;
+  margin: 40px auto;
+  padding: 10px;
+  background: linear-gradient(45deg, #eee, #fff);
+}
+#es6-guide footer .signup-form input {
+  display: block;
+  margin: 10px auto;
+  padding: 4px;
+}
+#es6-guide footer .signup-form .success {
+  border: 2px solid limegreen;
+}
+#es6-guide footer .signup-form .error {
+  border: 2px solid crimson;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22_reset.scss%22,%22style.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAgBA;EACE;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE;EACA;;;AAGF;EACE;;;AAGF;EACE;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;AAAA;EAEE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;AAAA;EAEE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;AAAA;EAEE;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;EACA;;;AAGF;AAAA;EAEE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;EACA;;;AAGF;EACE;;;AAGF;EACE;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE;EACA;;;AAGF;EACE;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;;;AAIJ;ACxSA;EACE;;AAEA;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAKN;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;;AAKN;EACE;;AAIJ;EACE;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;;AAGF;EACI;EACA;;AAGJ;EACI;;AAGJ;EACE;;;AAOJ;EACE;EACA;;AAGF;EACE;;AAGF;EACE;;AAGF;EACE;;AAGF;EACE;;AAGF;EACE;;AAGF;EACE;EACA;;AAGF;EACE;EACA;EACA;;AAGF;EACE;EACA;EACA;;AAGF;EACE;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;;AAGF;EACE;EACA;;AAGF;EACE;EACA;;AAGF;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;AAGF;EACE;;AAEA;EACE;EACA;EACA;;AAGF;EACE;EACA;EACA;;AAGF;EACE;EACA;;AAKF;EACE;;;AAOJ;EACE;;AAGF;EACE;;AAGF;EACE;EACA;EACA;EACA;;AAGF;EACE;;;AAMF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;;AAIE;EACE;;AAGF;EACE;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;;AAGF;EACE;EACA;EACA;;AAGJ;EACE;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;;AAGF;EACE;EACA;;AAGF;EACE;EACA;;AAKJ;EACE;;AAGF;EACE;;AAKF;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;;AAGF;EACE;;AAGF;EACE%22,%22file%22:%22style.css%22%7D */

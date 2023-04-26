@@ -1,0 +1,378 @@
+@use 'reset';
+
+#index {
+  background-color: #00539F;
+
+  div {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #FF9500;
+    padding: 0 1.25em 1.25em 1.25em;
+    border: 5px solid moccasin;
+
+    nav {
+      display: flex;
+      place-content: space-evenly;
+      place-items: center;
+  
+      menu {
+        display: flex;
+        flex-flow: column wrap;
+        gap: 1em;
+      }
+
+      .btn {
+        cursor: pointer;
+        background: #050e21;
+        background-image: -webkit-linear-gradient(top, #050e21, #091a3d);
+        background-image: -moz-linear-gradient(top, #050e21, #091a3d);
+        background-image: -ms-linear-gradient(top, #050e21, #091a3d);
+        background-image: -o-linear-gradient(top, #050e21, #091a3d);
+        background-image: linear-gradient(to bottom, #050e21, #091a3d);
+        border: none;
+        -webkit-border-radius: 60;
+        -moz-border-radius: 60;
+        border-radius: 60px;
+        text-shadow: 3px 3px 5px #00000080;
+        -webkit-box-shadow: 3px 3px 5px #00000080;
+        -moz-box-shadow: 3px 3px 5px #00000080;
+        box-shadow: 3px 3px 5px #00000080;
+        font-family: Arial;
+        color: #fff;
+        font-size: 16px;
+        padding: 22px 22px 22px 22px;
+        text-decoration: none;
+    
+        &:hover {
+          background: #51718d;
+          background-image: -webkit-linear-gradient(top, #51718d, #2b496a);
+          background-image: -moz-linear-gradient(top, #51718d, #2b496a);
+          background-image: -ms-linear-gradient(top, #51718d, #2b496a);
+          background-image: -o-linear-gradient(top, #51718d, #2b496a);
+          background-image: linear-gradient(to bottom, #51718d, #2b496a);
+          text-decoration: none;
+        }
+      }
+    }
+
+    .syntax {
+      width: 600px;
+      margin: auto;
+      border: thin #c0c0c0 solid;
+      padding: 5px 4px;
+      text-align: center;
+      display: flex;
+      flex-flow: column;
+      width: 50%;
+      cursor: pointer;
+  
+      figcaption {
+        background-color: #222;
+        color: #ccc;
+        font: italic smaller sans-serif;
+        padding: 3px 2px;
+        text-align: center;
+  
+        .btn {
+          background-color: salmon;
+          color: peachpuff;
+          border-radius: 25px;
+          padding: 0.5em 1em;
+      
+          &:hover {
+            background-color: peachpuff;
+            color: salmon;
+          }
+        }
+      }
+  
+      &:hover {
+        box-shadow: 3px 3px 4px 4px #fff;
+      }
+    }
+
+    h1 {
+      margin: 0;
+      padding: 1.25em 0;
+      color: #00539F;
+      text-shadow: 3px 3px 1px #222;
+      font-size: 3.75rem;
+      text-align: center;
+    }
+
+    h2, h3, h4, h5, h6 {
+      margin: 1em 0;
+    }
+
+    p, li {
+        line-height: 2;
+        letter-spacing: 1px;
+      }
+
+    ol, ul {
+        margin-left: 1em;
+      }
+
+    li {
+      margin-left: 2em;
+    }
+  }
+}
+
+#css-bacon-fansite {
+
+  h1 {
+    color: #66bfbf;
+    font-size: 200px;
+  }
+
+  #heading:hover {
+    color: red;
+  }
+
+  img:hover {
+    background-color: gold;
+  }
+
+  .bacon {
+    background-color: green;
+  }
+
+  .broccoli {
+    background-color: red;
+  }
+
+  .circular {
+    border-radius: 50%;
+  }
+
+  .box-200 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .lightblue {
+    border: solid black 10px;
+    padding: 20px;
+    background-color: lightblue;
+  }
+
+  .darkred {
+    margin-left: 200px; // 260px with content-box sizing
+    border: solid black 20px;
+    background-color: darkred;
+  }
+
+  .yellowgreen {
+    margin-left: 400px; // 500px with content-box sizing
+    border: solid black 10px;
+    background-color: yellowgreen;
+  }
+
+  .box-100 {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+
+  .red {
+    left: 200px;
+    background-color: red;
+  }
+
+  .blue {
+    right: 100px;
+    background-color: blue;
+  }
+
+  .yellow {
+    right: 100px;
+    background-color: yellow;
+  }
+
+  .gold {
+    right: 40px;
+    bottom: 40px;
+    background-color: gold;
+    z-index: 2;
+  }
+
+  .silver {
+    background-color: silver;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1;
+  }
+
+  .bronze {
+    background-color: goldenrod;
+    right: 0px;
+    bottom: 0px;
+    z-index: 0;
+  }
+
+  .absolute-box-100 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+  }
+
+  .absolute-position {
+    position: relative;
+
+    .pink {
+      top: 200px;
+      left: 200px;
+      background-color: pink;
+    }
+  
+    .purple {
+      top: 100px;
+      left: 100px;
+      background-color: purple;
+    }
+  
+    .orange {
+      left: 0px;
+      background-color: orange;
+    }
+  }
+
+  footer {
+    a {
+      color: powderblue;
+    }
+  }
+}
+
+#jquery-dom {
+
+  .btn:active {
+    color: red;
+  }
+
+  .invisible {
+    visibility: hidden;
+  }
+
+  .huge {
+    color: yellow;
+    font-family: cursive;
+    font-size: 10rem;
+    font-weight: bold;
+  }
+
+  .margin-50 {
+    margin: 50px;
+  }
+}
+
+#es6-guide {
+
+  header {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: space-around;
+  }
+
+  main {
+    width: 80%;
+    margin: 1em auto;
+
+    .dom {
+
+      .invisible {
+        visibility: hidden;
+      }
+  
+      .btn {
+        background-color: red;
+        color: yellow;
+        font-family: cursive;
+        font-size: 10rem;
+        font-weight: bold;
+      }
+  
+      .errorText {
+        padding: 10px;
+        color: crimson;
+        border: 1px dotted crimson;
+      }
+      
+      .successText {
+        padding: 10px;
+        color: limegreen;
+        border: 1px dotted limegreen;
+      }
+  
+    .box {
+      width: 200px;
+      height: 200px;
+      margin: 10px 0;
+      background-color: #eee;
+      text-align: center;
+      padding: 20px;
+    }
+  
+    .signup-form {
+      max-width: 200px;
+      margin: 40px auto;
+      padding: 10px;
+      background: linear-gradient(#eee, #fff);
+  
+      input {
+        display: block;
+        margin: 10px auto;
+        padding: 4px;
+      }
+  
+      .success {
+        border: 2px solid limegreen;
+        box-shadow: 3px 3px 5px crimson;
+      }
+  
+      .error {
+        border: 2px solid crimson;
+        box-shadow: 3px 3px 5px limegreen;
+      }
+    }
+    }
+
+    h2, div, ul, p {
+      margin: 1em;
+    }
+
+    li {
+      margin-left: 2em;
+    }
+  }
+
+  footer {
+    .signup-form {
+      max-width: 200px;
+      margin: 40px auto;
+      padding: 10px;
+      background: linear-gradient(45deg, #eee, #fff);
+  
+      input {
+        display: block;
+        margin: 10px auto;
+        padding: 4px;
+      }
+    
+      .success {
+        border: 2px solid limegreen;
+      }
+    
+      .error {
+        border: 2px solid crimson;
+      }
+    }
+  }
+}
