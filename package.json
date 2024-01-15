@@ -1,0 +1,122 @@
+{
+  "name": "webpack-boilerplate",
+  "description": "Legacy vanilla TypeScript boilerplate with Webpack.",
+  "keywords": [
+    "Webpack",
+    "HTML",
+    "SCSS",
+    "PostCSS",
+    "Bootstrap",
+    "TS",
+    "ES5",
+    "jQuery",
+    "ESLint",
+    "Prettier",
+    "Jest",
+    "Husky"
+  ],
+  "author": "Coding Sable",
+  "license": "ISC",
+  "private": true,
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "webpack-boilerplate"
+  },
+  "main": "index.ts",
+  "engines": {
+    "vscode": "^1.22.0",
+    "npm": ">=10.2.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run jest"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all",
+      "IE 11"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "scripts": {
+    "bundle": "webpack",
+    "watch": "webpack --watch",
+    "start": "webpack serve",
+    "dev": "cross-env NODE_ENV=production concurrently \"npm run watch\" \"npm run start\"",
+    "build": "cross-env NODE_ENV=production webpack",
+    "stats": "cross-env NODE_ENV=production STATS=server webpack --profile --json bundle-stats.json",
+    "clean": "rm -rf ./dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
+    "jest": "jest"
+  },
+  "dependencies": {
+    "link": "2.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/preset-env": "^7.23.8",
+    "@testing-library/jest-dom": "6.2.0",
+    "@testing-library/user-event": "14.5.2",
+    "@types/babel__core": "^7.20.5",
+    "@types/babel__preset-env": "^7.9.6",
+    "@types/bootstrap": "^5.2.10",
+    "@types/core-js": "^2.5.8",
+    "@types/eslint": "^8.56.2",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@types/jest": "29.5.11",
+    "@types/jquery": "^3.5.29",
+    "@types/lodash": "^4.14.202",
+    "@types/node": "20.11.0",
+    "@types/regenerator-runtime": "^0.13.5",
+    "@types/sass-loader": "^8.0.8",
+    "@types/uuid": "^9.0.7",
+    "@types/webpack-bundle-analyzer": "^4.6.3",
+    "@typescript-eslint/eslint-plugin": "6.18.1",
+    "@typescript-eslint/parser": "6.18.1",
+    "autoprefixer": "10.4.16",
+    "babel-loader": "^9.1.3",
+    "bootstrap": "^5.3.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "concurrently": "^8.2.2",
+    "core-js": "^3.35.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.9.0",
+    "cssnano": "6.0.3",
+    "eslint": "8.56.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-prettier": "5.1.3",
+    "html-webpack-plugin": "^5.6.0",
+    "husky": "8.0.3",
+    "jest": "29.7.0",
+    "jquery": "^3.7.1",
+    "lodash": "^4.17.21",
+    "mini-css-extract-plugin": "^2.7.7",
+    "postcss": "^8.4.33",
+    "postcss-loader": "^7.3.4",
+    "postcss-preset-env": "^9.3.0",
+    "prettier": "3.2.2",
+    "regenerator-runtime": "^0.14.1",
+    "sass": "^1.69.7",
+    "sass-loader": "^13.3.3",
+    "style-loader": "^3.3.4",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "uuid": "^9.0.1",
+    "web-vitals": "^2.1.4",
+    "webpack": "^5.89.0",
+    "webpack-bundle-analyzer": "^4.10.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
