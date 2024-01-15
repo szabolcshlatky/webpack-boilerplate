@@ -54,10 +54,11 @@
     "build": "cross-env NODE_ENV=production webpack",
     "stats": "cross-env NODE_ENV=production STATS=server webpack --profile --json bundle-stats.json",
     "clean": "rm -rf ./dist",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "echo": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
     "jest": "jest",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "json": "json-server --watch db.json --port 3001"
   },
   "dependencies": {
     "link": "2.1.0"
